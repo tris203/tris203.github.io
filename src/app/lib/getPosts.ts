@@ -13,7 +13,7 @@ const availableFields = [
 type AvailableField = (typeof availableFields)[number];
 type AvailableFields = { [key in AvailableField]: string };
 
-const postsDirectory = join(process.cwd(), 'content');
+const postsDirectory = join('content');
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
