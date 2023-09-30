@@ -33,7 +33,7 @@ export default function Post({ params }: { params: { slug: string } }) {
       {post.categories && (
         <p className='mb-4 text-gray-100'>
           <span className='mr-2'>Categories</span>
-          {(post.categories as unknown as string[]).map((category: string) => (
+          {post.categories.map((category: string) => (
             <span
               key={category}
               className='mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700'

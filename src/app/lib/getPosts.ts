@@ -2,16 +2,16 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 
-const availableFields = [
-  'title',
-  'date',
-  'slug',
-  'content',
-  'categories',
-] as const;
+type Fields = {
+  title: string;
+  date: string;
+  slug: string;
+  content: string;
+  categories: string[];
+};
 
-type AvailableField = (typeof availableFields)[number];
-type AvailableFields = { [key in AvailableField]: string };
+// type AvailableField = (typeof availableFields)[number];
+type FieldTypes = keyof Fields;
 
 const postsDirectory = join('content');
 
@@ -19,26 +19,31 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string, fields: AvailableField[] = []) {
+export function getPostBySlug(slug: string, fields: FieldTypes[] = []) {
   const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = join(postsDirectory, `${realSlug}/index.md`);
+  const fullPath = join(postsDirectory, `${realSlug}\\index.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  const items: AvailableFields = {} as AvailableFields;
+  const items: Fields = {} as Fields;
 
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
-    if (field === 'title') items[field] = data.title;
-    if (field === 'slug') items[field] = realSlug;
-    if (field === 'content') items[field] = content;
-    if (field === 'date') items[field] = data.date;
-    if (field === 'categories') items[field] = data.categories;
+    switch (field) {
+      case 'slug':
+        items[field] = realSlug;
+        break;
+      case 'content':
+        items[field] = content;
+        break;
+      default:
+        items[field] = data[field];
+    }
   });
   return items;
 }
 
-export function getAllPosts(fields: AvailableField[] = []) {
+export function getAllPosts(fields: FieldTypes[] = []) {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
