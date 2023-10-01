@@ -10,6 +10,8 @@ type Fields = {
   categories: string[];
 };
 
+const excludeSlugs = ['about', 'portfolio'];
+
 // type AvailableField = (typeof availableFields)[number];
 type FieldTypes = keyof Fields;
 
@@ -46,6 +48,7 @@ export function getPostBySlug(slug: string, fields: FieldTypes[] = []) {
 export function getAllPosts(fields: FieldTypes[] = []) {
   const slugs = getPostSlugs();
   const posts = slugs
+    .filter((slug) => !excludeSlugs.includes(slug))
     .map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
