@@ -11,4 +11,4 @@ This guy took that advice, and then threw it out the window. As a proof of conce
 
 It's interesting that it appeared to hold some of his preferences,all the way from Windows 3.1, including 'Hot Pink' backgrounds. He also installs Doom II, and Monkey Island, and they continue to work throughout the upgrades. Although, id be very interested to see the size of his C: drive and how much crap he has carried over.
 
-http://www.youtube.com/watch?v=vPnehDhGa14
+[YouTube Video](http://www.youtube.com/watch?v=vPnehDhGa14)

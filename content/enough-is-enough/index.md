@@ -9,9 +9,9 @@ This sunday, was the date that a peaceful protest had been organised in Guernsey
 
 It was reasonably well attended, below are some photos:
 
-[![Enough is Enough (1)](/images/enough-is-enough_9001.jpg)](http://snappeh.com/blog/wp-content/uploads/2014/11/enough-is-enough_9001.jpg)There was a fine collection of banners, and a make shift stage. There was a reasonably interesting Q&A, and some speeches from deputies.
+[![Enough is Enough (1)](/images/enough-is-enough_9001.jpg)]There was a fine collection of banners, and a make shift stage. There was a reasonably interesting Q&A, and some speeches from deputies.
 
-[![Enough Is Enough (2)](/images/Protest-6476015_90011.jpg)](http://snappeh.com/blog/wp-content/uploads/2014/11/Protest-6476015_90011.jpg)
+[![Enough Is Enough (2)](/images/Protest-6476015_90011.jpg)]
 
 It may not have changed anybodies mind, and it may ultimately have no effect at all, but atleast it showed that a number of Guernsey residents are not happy with the status quo and the direction that it may appear things are going.
 
