@@ -29,16 +29,30 @@ export default function HomePage() {
             <ol className='whitespace-nowrap text-sm text-gray-100'>
               {posts.slice(0, 5).map((post) => (
                 <li key={post.slug}>
-                  <div className='mb-1 ml-2 flex w-full text-sm  text-gray-100 '>
+                  <div className='mb-1 ml-2 flex w-full text-gray-100 '>
                     <Link href={`/blog/${post.slug}`}>
-                      <span className='overflow-hidden whitespace-nowrap text-sm text-gray-100 hover:animate-pulse hover:text-gray-100'>{`${post.title} - ${post.date}`}</span>
+                      <span className='overflow-hidden whitespace-nowrap text-gray-100 hover:animate-pulse hover:text-gray-100'>
+                        {post.title}
+                      </span>
+                      <div>
+                        <span className='ml-2 text-sm text-gray-400 hover:text-gray-100'>
+                          {post.date}
+                        </span>
+                      </div>
                     </Link>
                   </div>
                 </li>
               ))}
             </ol>
             <div className='mt-2 text-sm text-gray-100'>
-              <Link href='/blog'>View All</Link>
+              <Link href='/blog'>
+                <button
+                  type='button'
+                  className='rounded bg-gray-700 px-4 py-2 font-bold text-gray-100 hover:bg-gray-600'
+                >
+                  View All Posts
+                </button>
+              </Link>
             </div>
           </div>
           <div className='flex h-full w-full flex-col rounded-lg border-4 border-gray-700 bg-gray-800 p-6 transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-700'>
