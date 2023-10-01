@@ -15,4 +15,4 @@ A lot has happened in the 7 years since I last posted on a tech front and a pers
 
 I should try to get back into writing again, writing is a massage for the soul.
 
-[![Damn Daniel GIF](/images/damn-daniel-recording.gif)]
+![Damn Daniel GIF](/images/damn-daniel-recording.gif)

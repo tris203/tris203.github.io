@@ -34,4 +34,6 @@ Please note, they changed the title that it was posted under. I can't recall wha
 
 ## References
 
-[Citzen Card Scheme Website](http://www.citizencard.com/) [Citzen Card Application Form](http://www.citizencard.com/ccappform.pdf) - Where it states a driving licence is suitable [ThisIsGuernsey (Guernsey Press Article)](http://www.thisisguernsey.com/2010/12/08/driving-licences-no-longer-accepted-at-pubs-and-nightclubs/) - Stating that driving licences aren't accepted anymore [Guernsey Press 'Your Say' Archive](http://www.thisisguernsey.co.uk/discus/messages/11779/12146.html?1296483514) - Currently on this page, may change. Cant work out how to link to that particular post. Although it is ID 42940.
+- [Citzen Card Scheme Website](http://www.citizencard.com/) [Citzen Card Application Form](http://www.citizencard.com/ccappform.pdf) - Where it states a driving licence is suitable
+- [ThisIsGuernsey (Guernsey Press Article)](http://www.thisisguernsey.com/2010/12/08/driving-licences-no-longer-accepted-at-pubs-and-nightclubs/) - Stating that driving licences aren't accepted anymore
+- [Guernsey Press 'Your Say' Archive](http://www.thisisguernsey.co.uk/discus/messages/11779/12146.html?1296483514) - Currently on this page, may change. Cant work out how to link to that particular post. Although it is ID 42940.

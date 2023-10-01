@@ -18,7 +18,7 @@ The bot has two modes, Novice and Veteran. Novice, the database of available mov
 
 In the novice it’s very easy to win, once you understand the algorithm. If you consistently play in an order, for example, if following rock, you always play scissors, then you know the bot will play rock, to beat your scissors. By analysing your own performance and knowing what the bot will through is interesting, and shows you can beat an algorithm.
 
-[![A image of winning against the Rock Paper Scissors Bot](/images/rps.jpg "Rock-Paper-Scissors Bot")]
+![A image of winning against the Rock Paper Scissors Bot](/images/rps.jpg "Rock-Paper-Scissors Bot")
 
 In the veteran mode it's harder, as you don’t have the dataset to check the results, to beat the algorithm. But I would definitely recommend you have a play with it. There is also a nice walk through mode, where it steps you through the algorithm to help you understand just how its working.
 
