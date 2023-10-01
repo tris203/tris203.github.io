@@ -7,7 +7,7 @@ categories:
 
 Well after reading my good friend Jason (deedoubleyou)'s blog post on the recent upgrade of Guernsey broadband [here](http://deedoubleyou.net/2011/02/01/guernsey-broadband/), I thought i would add my two cents. As I have found out this week, an upgrade to 8mb in Guernsey means an upgrade maybe, if you’re lucky By the way if you read the rest of the post, I really recommend OpenDNS, I think its great.
 
-\*\*Warning: Rant Alert\*\*  
+## \*\*Warning: Rant Alert\*\*  
   
 I have spent the last few weeks getting a little bit excited about the impending upgrade to 8mb for all Guernsey ADSL connections. This comes at no extra cost, and if it was anything like the previous upgrades (1mb -> 2mb; 2mb -> 4mb), it would require no interaction and one day you would be downloading something and look at the transfer speed and think ‘ooh that’s fast’. Unfortunately for me, this time, this was not the case.
 

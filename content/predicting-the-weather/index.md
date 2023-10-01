@@ -23,7 +23,7 @@ Then I take the string from the whole database, currently about 200 values (Jun 
 
 It then looks for this in the larger string and pulls out the next value. This is the prediction for the next day.
 
-[![Explaining storm prediction](/images/patterndemo.png "Pattern Demo")]
+![Explaining storm prediction](/images/patterndemo.png "Pattern Demo")
 
 So continuing the example above, Looking for the pattern in the larger string, it finds it, and therefore predicts the next storm reading to be a 0, meaning no Storm.
 

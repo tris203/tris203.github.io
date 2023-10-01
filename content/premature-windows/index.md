@@ -23,7 +23,7 @@ Also, let’s be honest. XP is getting old in a business environment, and for pe
 
 Below, is a copy of the windows Family Timeline, stolen from Wikipedia, [here](http://en.wikipedia.org/wiki/File:Windows_Family_Tree.svg)
 
-[Windows Family Tree - Up To Windows 7 (At Time of Writing)](http://upload.wikimedia.org/wikipedia/commons/0/0e/Windows_Family_Tree.svg "Windows Family Tree")
+![Windows Family Tree - Up To Windows 7 (At Time of Writing)](http://upload.wikimedia.org/wikipedia/commons/0/0e/Windows_Family_Tree.svg)
 
 We can all imagine how this looks in our heads, but it's interesting to see it actually make physical.
 
