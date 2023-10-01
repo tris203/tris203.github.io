@@ -1,5 +1,6 @@
-import Markdown from 'react-markdown';
+import { Metadata } from 'next';
 import { getPostBySlug, getPostSlugs } from '../../lib/getPosts';
+import ReactMarkdown from '@/app/components/ReactMarkdown';
 
 import BackButton from '@/app/components/BackButton';
 
@@ -11,6 +12,21 @@ export function generateStaticParams() {
       slug: slugNoExt,
     };
   });
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  // read route params then fetch data
+  const { slug } = params;
+  const post = getPostBySlug(slug, ['title']);
+  // return an object
+  return {
+    title: `TrisK>Blog>${post.title}`,
+    description: `Blog post titled ${post.title}`,
+  };
 }
 
 export default function Post({ params }: { params: { slug: string } }) {
@@ -43,9 +59,7 @@ export default function Post({ params }: { params: { slug: string } }) {
           ))}
         </p>
       )}
-      <Markdown className='space-y-6 text-lg text-gray-100'>
-        {post.content}
-      </Markdown>
+      <ReactMarkdown>{post.content}</ReactMarkdown>
     </div>
   );
 }
