@@ -13,6 +13,6 @@ Below is a graph of my speed test results from SpeedTest.net. These are performe
 
 My download speed isn't quite as fast as [some people's](https://www.fastinternetblog.uk/?p=248) on the same service, and certainly isn't too consistent, although this could be due to the variations in my testing, but I do have the ability to play online games, whilst my other half streams content from the internet. So that is good enough for my practical uses. Also when FTPing large files down, I get a fairly solid 25-30 megabytes a second writing speed. Which im happy with.
 
-\[caption id="attachment\_423" align="aligncenter" width="976"\][![VDSL Speed Graph](/images/VDSLSpeed.png)](http://snappeh.com/blog/wp-content/uploads/2014/10/VDSLSpeed.png) Speed graph showing VDSL speed in Guernsey\[/caption\]
+\[caption id="attachment\_423" align="aligncenter" width="976"\][![VDSL Speed Graph](/images/VDSLSpeed.png)] Speed graph showing VDSL speed in Guernsey\[/caption\]
 
 I have read [rumours](https://www.fastinternetblog.uk/?p=195) that there are currently some tests going on for Fibre to the home in Guernsey. So I would be excited for that and look forward to when it is offered, and more importantly at what price.

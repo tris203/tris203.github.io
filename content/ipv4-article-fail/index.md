@@ -13,11 +13,11 @@ As an IT Professional/Technical person, reading this explanation was painful to 
 
 So without further ado, look after the break for a copy of the article, and my points after reading it.
 
-Oh, and Guernsey Press, keep away from technical writing for a bit please \[caption id="attachment\_71" align="aligncenter" width="510" caption="Guernsey Press IPV4 Exhaustion article - 4/2/11"\][![Guernsey Press IPV4 article - 4/2/11](/images/GPArticle.jpg "Guernsey Press IPV4 article")](http://snappeh.com/blog/wp-content/uploads/2011/02/GPArticle.jpg)\[/caption\] Please read through the article, on the bits that I have highlighted. You should be able to click on it, to get it full size. Then each of these numbered points below address my comments on that highlighted part.
+Oh, and Guernsey Press, keep away from technical writing for a bit please \[caption id="attachment\_71" align="aligncenter" width="510" caption="Guernsey Press IPV4 Exhaustion article - 4/2/11"\][![Guernsey Press IPV4 article - 4/2/11](/images/GPArticle.jpg "Guernsey Press IPV4 article")] Please read through the article, on the bits that I have highlighted. You should be able to click on it, to get it full size. Then each of these numbered points below address my comments on that highlighted part.
 
 ## Fail 1 - Web Address
 
-Web addresses: http://en.wikipedia.org/wiki/Web\_address We are running out of IP address not Web address, I’m pretty sure every perceivable domain, on every single TLD isn’t about to be taken.
+Web addresses: [Wikipedia Article](http://en.wikipedia.org/wiki/Web_address) We are running out of IP address not Web address, I’m pretty sure every perceivable domain, on every single TLD isn’t about to be taken.
 
 ## Fail 2 - Internet Numbers
 
@@ -29,7 +29,7 @@ The number of address is actually 2^32, which is more like 4,294,967,296. Unless
 
 ## Fail 4 - Lying
 
-http://ipv6-test.com/validate.php - if you run that on channelisles.net, then it fails all tests and says that even their website isn’t IPv6 ready.
+(<http://ipv6-test.com/validate.php>) - if you run that on channelisles.net, then it fails all tests and says that even their website isn’t IPv6 ready.
 
 ## Fail 5 - NATing exists
 

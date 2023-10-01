@@ -21,4 +21,4 @@ Below is the most recent photo I have of the rack (although this is by no means 
 
 Details on the setup will be in the next post, which I'm sure nobody is waiting for with bated breath.
 
-[![](/images/IMG-20210204-WA0028-768x1024.jpg)](https://snappeh.com/blog/wp-content/uploads/2021/11/IMG-20210204-WA0028.jpg)
+![A photo of the server rack](/images/IMG-20210204-WA0028-768x1024.jpg "Server Rack")

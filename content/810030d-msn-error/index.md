@@ -13,6 +13,4 @@ Turns out the error was to do with ZoneAlarm firewall. I cant remeber the exact 
 
 But it was either allowing the executable associated with Messenger, or a option deep down somewhere. Have a poke around youll find it.
 
-Sorry I cant be of any use, and in hindsight, this post is just a usefull to you guys as a Page Not Found. But atleast you have some kind of pointer now.
-
 Thankyou, Goodnight.

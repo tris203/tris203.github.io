@@ -29,5 +29,3 @@ The answer is simple, in that in the early days, the database wasn’t very accu
 > Giving a total accuracy of 91.6%
 
 Note: The eagle-eyed among you, will have noticed, that the first result shows 323 predictions, and the final (as it is working now) gives 225, and I said I had excluded the first 100 rows. But that’s only 98. Well the database doesn’t start until ID=3. As it couldn’t predict when there were only 1 or 2 entries. And I actually restricted it by doing ID>100. So it’s actually the first 98 as rows I'm ignoring as 1 and 2 don't exist!
-
-Please feel free to check out the [current prediction](http://snappeh.com/blog/guernsey-forecast/), or my [current accuracy](http://snappeh.com/blog/guernsey-forecast/accuracy/), or if the [Storm is Coming](http://www.isthestormcoming.com) :)

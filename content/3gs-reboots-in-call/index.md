@@ -13,7 +13,7 @@ It appears to be a pretty discussed topic, and appears to be limited to iPhone 3
 
 This issue has been around since Jun/July 2010, and nobody seems to have a fix laid out in black and white.
 
-# The Solution
+## The Solution
 
 If you suffer from this try taking the battery out, and putting it back in again. I did this on my boss’s phone, and it worked! All you have to do is take the screen out. Then unplug the battery cable, number 5/6 (they are clearly labelled). I can’t remember which number it was, do both to be safe.
 
