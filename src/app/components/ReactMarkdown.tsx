@@ -7,7 +7,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 export default function ReactMarkdown({ children }: { children: string }) {
   return (
     <Markdown
-      className='prose prose-invert max-w-4xl text-gray-100 prose-p:text-justify prose-img:h-1/6'
+      className='prose prose-invert max-w-4xl break-words text-gray-100 prose-p:text-justify prose-a:break-all prose-img:h-1/6'
       components={{
         // eslint-disable-next-line react/no-unstable-nested-components
         code(props) {
