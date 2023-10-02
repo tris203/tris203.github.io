@@ -65,8 +65,8 @@ const config: Config = {
         },
       },
       animation: {
-        typing: 'typing 3s steps(20)  alternate, blink .7s 1.5',
-        typing2: 'typing2 3s steps(15)  alternate, blink .7s 2',
+        typing: 'typing 3s steps(20)  alternate, blink .7s 2',
+        typing2: 'typing2 3s steps(14)  alternate, blink .7s 3',
         typing3: 'typing3 3s steps(18)  alternate, blink .7s infinite',
         fadein: 'fadein 3.5s ease-in-out',
       },

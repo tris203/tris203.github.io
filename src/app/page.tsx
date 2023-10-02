@@ -22,16 +22,16 @@ export default function HomePage() {
           </h2>
         </div>
 
-        <div className='mt-6 grid animate-fadein grid-cols-1 content-end items-start gap-4 py-4 text-lg md:grid-cols-3'>
+        <div className='mt-6 grid animate-fadein grid-cols-1 content-end items-start gap-4 py-4 text-lg lg:grid-cols-3'>
           <div className='flex h-full w-full flex-col rounded-lg border-4 border-gray-700 bg-gray-800 p-6 transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105  hover:bg-gray-700'>
             <div className='mb-4 flex w-full text-3xl text-gray-100'>Blog</div>
-            <div className='mb-! text-lg'>Latest Blog Posts</div>
+            <div className='mb-1 text-lg'>Latest Blog Posts</div>
             <ol className='whitespace-nowrap text-sm text-gray-100'>
               {posts.slice(0, 5).map((post) => (
                 <li key={post.slug}>
-                  <div className='mb-1 ml-2 flex w-full text-gray-100 '>
+                  <div className='mb-1 ml-2 flex w-full  text-gray-100 '>
                     <Link href={`/blog/${post.slug}`}>
-                      <span className='overflow-hidden whitespace-nowrap text-gray-100 hover:animate-pulse hover:text-gray-100'>
+                      <span className='whitespace-nowrap break-all text-gray-100 hover:animate-pulse hover:text-gray-100'>
                         {post.title}
                       </span>
                       <div>
