@@ -10,6 +10,8 @@ type Fields = {
   categories: string[];
 };
 
+const perPage = 9 as const;
+
 const excludeSlugs = ['about', 'portfolio'];
 
 // type AvailableField = (typeof availableFields)[number];
@@ -45,13 +47,19 @@ export function getPostBySlug(slug: string, fields: FieldTypes[] = []) {
   return items;
 }
 
-export function getAllPosts(fields: FieldTypes[] = []) {
+export function getAllPosts(fields: FieldTypes[] = [], page: number = 1) {
   const slugs = getPostSlugs();
   const posts = slugs
     .filter((slug) => !excludeSlugs.includes(slug))
     .map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+    .slice((page - 1) * perPage, page * perPage);
   return posts;
+}
+
+export function getPageCount() {
+  const slugs = getPostSlugs();
+  const posts = slugs.filter((slug) => !excludeSlugs.includes(slug));
+  return Math.ceil(posts.length / perPage);
 }

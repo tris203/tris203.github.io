@@ -1,21 +1,31 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { getAllPosts } from '@/app/lib/getPosts';
+import { getAllPosts, getPageCount } from '@/app/lib/getPosts';
 import BackButton from '../components/BackButton';
+import Pagination from '../components/Pagination';
 
 export const metadata: Metadata = {
   title: 'TrisK>Blog',
   description: 'Blog posts',
 };
 
-export default function page() {
-  const posts = getAllPosts(['title', 'date', 'content', 'slug']);
+export default function BlogMainPage({
+  params,
+}: {
+  params: { pageNum: string };
+}) {
+  const pageCount = getPageCount();
+  const { pageNum } = params;
+  const posts = getAllPosts(
+    ['title', 'date', 'content', 'slug'],
+    pageNum ? Number(pageNum) : 1,
+  );
   return (
-    <div className='container mx-auto px-4 py-8'>
+    <div className='container mx-auto px-4 py-4'>
       <BackButton />
       <div className='mb-6 flex w-full text-3xl text-gray-100'>Blog Posts</div>
-      <div className='grid grid-cols-1 gap-6 gap-y-12 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
+      <div className='gap-y8 grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
         {posts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <div className='boder-gray-700 min-h-full transform flex-col rounded-lg border-4 border-gray-700 bg-gray-800 p-6 transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-700'>
@@ -40,6 +50,7 @@ export default function page() {
           </Link>
         ))}
       </div>
+      <Pagination currentPage={pageNum} numPages={pageCount} />
     </div>
   );
 }
