@@ -40,7 +40,7 @@ export default function Post({ params }: { params: { slug: string } }) {
   ]);
 
   return (
-    <div className='container m-2 mx-auto px-4 py-8'>
+    <div className='container mx-auto px-4 py-4'>
       <div className='mb-4 flex w-full text-gray-100'>
         <BackButton />
       </div>
