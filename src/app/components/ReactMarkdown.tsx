@@ -16,14 +16,15 @@ function generateCodeBlock(
       style={vscDarkPlus}
       language={match[1]}
       showLineNumbers
-      customStyle={{
-        maxWidth: 'calc(100vw - 50px)',
-      }}
+      wrapLongLines
+      wrapLines
+      className='max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none'
     >
       {String(props.children).replace(/\n$/, '')}
     </SyntaxHighlighter>
   ) : (
-    <code className={props.className}>{props.children}</code>
+    <code>
+    {props.children}</code>
   );
 }
 
@@ -41,7 +42,7 @@ export default function ReactMarkdown({ children }: { children: string }) {
   return (
     <div className='container'>
       <Markdown
-        className='prose prose-invert break-words text-gray-100 prose-p:break-words prose-p:text-justify prose-a:break-all prose-img:h-1/6'
+        className='prose prose-invert break-words text-gray-100 prose-p:break-words prose-p:text-justify prose-a:break-all prose-img:h-1/6 max-w-none'
         components={{
           code: generateCodeBlock,
           pre: noPreWrap,
