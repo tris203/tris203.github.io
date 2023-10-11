@@ -16,8 +16,6 @@ function generateCodeBlock(
       style={vscDarkPlus}
       language={match[1]}
       showLineNumbers
-      wrapLongLines
-      wrapLines
       className='max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none'
     >
       {String(props.children).replace(/\n$/, '')}
