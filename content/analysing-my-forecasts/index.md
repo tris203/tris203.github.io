@@ -5,7 +5,7 @@ categories:
   - "weather"
 ---
 
-So I've now been predicting the weather for a week, and well all I can say is. I’m pretty damn good at it.
+So I've now been predicting the weather for a week, and well all I can say is, I’m pretty damn good at it.
 
 I wrote a script to go back in the database, and using the same logic as my current predicting script. It looks at data that would have been available to the system then, and puts a prediction in the database. This was marked as retrospective (although in theory it doesn’t matter).
 

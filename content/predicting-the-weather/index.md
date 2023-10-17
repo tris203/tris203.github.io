@@ -32,8 +32,8 @@ So the string would become
 
 > 1000010100010
 
-Now, the real test of this would be how accurate this method of prediction is, I will be adding to the script in the next few days so the predictions are added to a table, then job will then be scheduled by Cron, just as the main Storm website. So as soon as it fetches the real storm data, I will predict the next reading.
+Now, the real test of this would be how accurate this method of prediction is, I will be adding to the script in the next few days, so the predictions are added to a table, then job will then be scheduled by Cron, just as the main Storm website. So as soon as it fetches the real storm data, I will predict the next reading.
 
-Then I will code a another script to check my accuracy. I'm hoping for good results, but realistically I doubt it will.
+Then I will code another script to check my accuracy. I'm hoping for good results, but realistically I doubt it will.
 
 If this method of predicting the weather does work, then MET department eat your heart out.

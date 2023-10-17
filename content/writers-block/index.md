@@ -7,7 +7,7 @@ categories:
 
 After re-activating this blog for the 3rd or 4th time; I now remember why it goes neglected quite a lot.
 
-It's mainly due to the fact that im fairly difficult to actually enrage about a subject. Don't get me wrong, within my friend group I have a reputation for playing devil's advocate and probably for being fairly belligerent. But in order to write a big ranty paragraph, and for it actually to have enough substance to meet the incredibly low standards to be posted, I have to be angry enough, or at the very least feel like I am making a passionate or unique point to find the motivation to bother.
+It's mainly due to the fact that I'm fairly difficult to actually enrage about a subject. Don't get me wrong, within my friend group I have a reputation for playing devil's advocate and probably for being fairly belligerent. But in order to write a big ranting paragraph, and for it actually to have enough substance to meet the incredibly low standards to be posted, I have to be angry enough, or at the very least feel like I am making a passionate or unique point to find the motivation to bother.
 
 Although, hypocritically, obviously it happens fairly regularly, as the majority of posts on this site are tagged in the rant category. Although with the reasonably low number of posts over the span of years, I'm not going to be booking myself in for a blood pressure check just yet.
 

@@ -5,7 +5,7 @@ categories:
   - "weather"
 ---
 
-Well, its the 1st of December, and we have had small amout of snow in Guernsey. Enough for me to not want to drive to work, call me wet, but this is Guernsey. Snow is srsbsns
+Well, it's the 1st of December, and we have had small amount of snow in Guernsey. Enough for me to not want to drive to work, call me wet, but this is Guernsey. Snow is srsbsns
 
 This was the view out of my front door this morning:
 
