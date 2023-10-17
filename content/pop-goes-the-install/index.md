@@ -1,5 +1,5 @@
 ---
-title: "Switching to Linux"
+title: "Pop Goes The Install"
 date: "2023-10-17"
 categories: 
   - "tech"
