@@ -5,7 +5,7 @@ categories:
   - "rants"
 ---
 
-I know Jason was going to cover this at his blog over at [deedoubleyou.net](http://deedoubleyou.net), but he hasn’t. And this was posted on the 4th of Febuary, back when the IPV4 exhaustion thing was current. So I thought I would write a little something about this before its entirely outdated.
+I know Jason was going to cover this at his blog over at [deedoubleyou.net](http://deedoubleyou.net), but he hasn’t. And this was posted on the 4th of February, back when the IPV4 exhaustion thing was current. So I thought I would write a little something about this before its entirely outdated.
 
 Everybody knows we are running out of IPV4 address, and has read about it on about a million technical sites. Well our local paper decided do a small section about it in its 'world news' section.
 
@@ -13,7 +13,7 @@ As an IT Professional/Technical person, reading this explanation was painful to 
 
 So without further ado, look after the break for a copy of the article, and my points after reading it.
 
-Oh, and Guernsey Press, keep away from technical writing for a bit please \[caption id="attachment\_71" align="aligncenter" width="510" caption="Guernsey Press IPV4 Exhaustion article - 4/2/11"\][![Guernsey Press IPV4 article - 4/2/11](/images/GPArticle.jpg "Guernsey Press IPV4 article")] Please read through the article, on the bits that I have highlighted. You should be able to click on it, to get it full size. Then each of these numbered points below address my comments on that highlighted part.
+Oh, and Guernsey Press, keep away from technical writing for a bit please [![Guernsey Press IPV4 article - 4/2/11](/images/GPArticle.jpg)] Please read through the article, on the bits that I have highlighted. You should be able to click on it, to get it full size. Then each of these numbered points below address my comments on that highlighted part.
 
 ## Fail 1 - Web Address
 
@@ -21,7 +21,7 @@ Web addresses: [Wikipedia Article](http://en.wikipedia.org/wiki/Web_address) We 
 
 ## Fail 2 - Internet Numbers
 
-Internet numbers is a fail, I'm pretty sure somebody with even a basic idea of networking could explain it better than that. An internet address would of been better, or internet postcode. That would have made a lot more sense. Also 192.168.1.1 isn’t an internet address, as it is reserved for internal use. So I wouldn’t call it an internet number/postcode at all.
+Internet numbers is a fail, I'm pretty sure somebody with even a basic idea of networking could explain it better than that. An internet address would have been better, or internet postcode. That would have made a lot more sense. Also, 192.168.1.1 isn’t an internet address, as it is reserved for internal use. So I wouldn’t call it an internet number/postcode at all.
 
 ## Fail 3 - Wrong number
 
@@ -41,6 +41,6 @@ IPs aren’t necessarily unique, especially ones connected to private numbers. P
 
 ## Conclusion
 
-Well kids, this is why technical writings should be limited to technical people. Another point I would like to make, is if you are 'dumbing' down a technical subject, for a non-technical audience, please keep it accurate. There is no point in mis-information.
+Well kids, this is why technical writings should be limited to technical people. Another point I would like to make, is if you are 'dumbing' down a technical subject, for a non-technical audience, please keep it accurate. There is no point in misinformation.
 
 So in final conclusion: 6 technical fails in a few hundred words is pretty appalling, although it did give me and the rest of the IT team at work some laughs. Well played Guernsey Press.

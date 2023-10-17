@@ -11,4 +11,4 @@ Hopefully ill be able to go to the hard drive of azaroth (my old server) and be 
 
 Until then; thanks to Jason ([deedoubleyou](http://deedoubleyou.net)) for hosting this on the VPS for his new company [Reformsoft](http://reformsoft.org).
 
-So, this is just filler. But real content is on its way soon, maybe, if im not too lazy.
+So, this is just filler. But real content is on its way soon, maybe, if I'm not too lazy.

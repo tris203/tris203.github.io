@@ -27,7 +27,7 @@ Below, is a copy of the windows Family Timeline, stolen from Wikipedia, [here](h
 
 We can all imagine how this looks in our heads, but it's interesting to see it actually make physical.
 
-Vista was a utter fail, and they wanted to get 7 out as soon as they could, but it still took just under 3 years (RTM to RTM) to get on track.
+Vista was an utter fail, and they wanted to get 7 out as soon as they could, but it still took just under 3 years (RTM to RTM) to get on track.
 
 Windows XP was Microsoft’s golden boy, and everybody knew it, RTM XP to RTM Vista, was over 5 years, and I think this was mainly due to its adoption in business, and Microsoft wanting to make the most of that. It's very hard to co-ordinate an OS upgrade in the business environment, especially when working with large numbers of end users, so if an OS makes it into the business environment it's there to stay for at least a few years. Microsoft will realise this, and will be happy to carry on selling licences for no extra cost of development, aside from routine bug fix service packs, and the usual development routine with Patch Tuesday etc.
 
@@ -37,4 +37,4 @@ I'm not disagreeing entirely, as the rumour Sam was writing about only stated 'm
 
 ## Conclusion
 
-My opinion is that Windows 7 is going to get swept up by business, and Microsoft are going to milk it for all its worth. Who knows, maybe I’ll be reposting this timeline at the end of this year, and marvelling at how quickly Microsoft released Windows 8, I don't know, but the vibe I'm getting right now, is that Windows 7, could be here to stay for a little while.
+My opinion is that Windows 7 is going to get swept up by business, and Microsoft are going to milk it for all it's worth. Who knows, maybe I’ll be reposting this timeline at the end of this year, and marvelling at how quickly Microsoft released Windows 8, I don't know, but the vibe I'm getting right now, is that Windows 7, could be here to stay for a little while.

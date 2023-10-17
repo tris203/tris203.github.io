@@ -5,11 +5,11 @@ categories:
   - "tech"
   - "typescript"
 ---
-I decided to rewrite this entire website, migrating from Wordpress to a static site generated in NextJS, partly because I wanted to have something more customisable and partly because I wanted to get away from Wordpress.
+I decided to rewrite this entire website, migrating from WordPress to a static site generated in NextJS, partly because I wanted to have something more customisable and partly because I wanted to get away from WordPress.
 
-One of the things I knew I had to get working was code highlighting, I wanted to be able to write code in my posts and have it look nice and pretty. The source files for these posts are written in markdown, and I was already using [react-markdown](https://github.com/remarkjs/react-markdown) to parse the markdown into HTML, so I needed to find a way to get code highlighting working with react-markdown.
+One of the things I knew I had to get working was code highlighting, I wanted to be able to write code in my posts and have it look nice and pretty. The source files for these posts are written in Markdown, and I was already using [react-markdown](https://github.com/remarkjs/react-markdown) to parse the markdown into HTML, so I needed to find a way to get code highlighting working with react-markdown.
 
-Their docs suggest using [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter) and then using Prism.js ( aparently it has better JSX highlighting support over highlight.js) as the highlighter, so after installing the packages I then went looking at the docs to see how to integrate it. The example code in their docs, reads pretty horrifically:
+Their docs suggest using [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter) and then using Prism.js (apparently it has better JSX highlighting support over highlight.js) as the highlighter, so after installing the packages I then went looking at the docs to see how to integrate it. The example code in their docs, reads pretty horrifically:
 
 ```jsx
 ReactDom.render(
@@ -42,9 +42,9 @@ ReactDom.render(
 Now, firstly I find the lack of types disturbing.
 ![Darth Vader GIF](/images/vaderlack.gif)
 
-Secondly, I don't like the way it's written, it's not very readable and it's not very maintainable, I don't like the obscure ternary operator, I don't like the shadowed variable names, I dont like the prop spreading. It didn't fill me with hope or happiness. But, I pasted the code in and it worked, so I decided to try and refactor it to something I was happier with.
+Secondly, I don't like the way it's written, it's not very readable, and it's not very maintainable, I don't like the obscure ternary operator, I don't like the shadowed variable names, I don't like the prop spreading. It didn't fill me with hope or happiness. But, I pasted the code in, and it worked, so I decided to try and refactor it to something I was happier with.
 
-I have split the code generator out into a seperate function, and then had to do the same with the Pre tags, as it would insist on putting a pre tag around the code block, which I didn't want, I also added a max width to the code blocks, as they were stretching the page out too much especially on mobile.
+I have split the code generator out into a separate function, and then had to do the same with the Pre tags, as it would insist on putting a pre tag around the code block, which I didn't want, I also added a max width to the code blocks, as they were stretching the page out too much especially on mobile.
 
 ```jsx
 'use client';
@@ -103,9 +103,9 @@ export default function ReactMarkdown({ children }: { children: string }) {
 }
 ```
 
-I'm much happier with this, it's more readable, it's more maintainable, it's more typesafe. I'm sure there are still improvements to be made and I dont't like the linting override, but I'm happy with it for now.
+I'm much happier with this, it's more readable, it's more maintainable, it's more type safe. I'm sure there are still improvements to be made, and I don't like the linting override, but I'm happy with it for now.
 
-I may clean it up a bit and submit a PR to their docs to see if they want to use this instead. I think its better to have a more readable example in the docs, and its definately clearer to me what is going on in this code.
+If I get the time, I might clean it up a bit and submit a PR to their docs to see if they want to use this instead. I think it's better to have a more readable example in the docs, and it's definitely clearer to me what is going on in this code.
 
 But mainly this post is for me to remember how I did it, and to check that the code highlighting works as I write this.
 Also, a friendly reminder to myself that when you are struggling to type something `Ctrl` + Click or Highlight and `F12` is your friend.

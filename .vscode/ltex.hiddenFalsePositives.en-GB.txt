@@ -1,0 +1,13 @@
+{"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QMicrosoft say neither, and “Any new instances of the three flashing red lights error are merely coincidental\"\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QAccording to the BBC \"Online gaming forums have also been buzzing with accounts of consoles showing the Red Ring of Death shortly after plugging in Kinects.\"\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QI'm sure there are still improvements to be made, and I don't like the linting override, but I'm happy with it for now.\\E$"}
+{"rule":"LITTLE_BIT","sentence":"^\\QI have spent the last few weeks getting a little bit excited about the impending upgrade to 8mb for all Guernsey ADSL connections.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QYou'll break the Internets!\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QIt consisted of a 4 bay NAS and a few Raspberry Pis for assorted tasks.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QIt is considerably tidier than this now and the Raspberry Pis are now gone with it all virtualized on the below.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\Qbigreghunt.gg - A online website, where players can upload photos of vehicle registrations to score points\ntrax.pt - A Workout tracking app with extensive calculations, projections and graphing\nDisFTP - A secure and efficient FTP client using Discord as storage\nMany Robot Process Automations for Business' in many sectors\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QSnow is srsbsns\\E$"}
+{"rule":"THIS_NNS","sentence":"^\\QAnd if anybody who has any say in this stumbles acrross this, I would be thrilled to hear your response.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QHowever, local stores often take the complete mick, taking weeks to get the item in and then when they do it is at a pricing point nowhere near the UK RRP of the product.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QWhich takes me full circle back to the point of, if a consumer can only buy the phone from Apple, and no Amazon resellers can buy them from a wholesaler to resale on, then who the be-jesus are the Guernsey Telecoms companies buying theirs from?\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QHe said that he had tried rebooting the phone, had tried restoring the firmware, and contacted the iStore who said it would have to be sent away to be fixed.\\E$"}
