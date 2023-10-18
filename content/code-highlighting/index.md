@@ -108,6 +108,7 @@ I'm much happier with this, it's more readable, it's more maintainable, it's mor
 If I get the time, I might clean it up a bit and submit a PR to their docs to see if they want to use this instead. I think it's better to have a more readable example in the docs, and it's definitely clearer to me what is going on in this code.
 
 But mainly this post is for me to remember how I did it, and to check that the code highlighting works as I write this.
-Also, a friendly reminder to myself that when you are struggling to type something `Ctrl` + Click or Highlight and `F12` is your friend.
+Also, a friendly reminder to myself that when you are struggling to type something <kbd>Ctrl + Click</kbd> or Highlight and <kbd>F12</kbd> is your friend.
 
-This has also made me realise that KBD tags don't work, so I guess I'll have to fix that next.
+This has also made me realise that KBD tags don't work[^1], so I guess I'll have to fix that next.
+[^1]: They work now!
