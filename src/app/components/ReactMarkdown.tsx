@@ -2,14 +2,14 @@
 
 import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
-import remarkGfm from 'remark-gfm'
+import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function generateCodeBlock(
   props: React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLElement>,
-    HTMLElement
+  React.HTMLAttributes<HTMLElement>,
+  HTMLElement
   >,
 ) {
   const match = /language-(\w+)/.exec(props.className || '');
@@ -24,14 +24,16 @@ function generateCodeBlock(
     </SyntaxHighlighter>
   ) : (
     <code>
-    {props.children}</code>
+      {props.children}
+
+    </code>
   );
 }
 
 function noPreWrap(
   props: React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLPreElement>,
-    HTMLPreElement
+  React.HTMLAttributes<HTMLPreElement>,
+  HTMLPreElement
   >,
 ) {
   // eslint-disable-next-line react/jsx-no-useless-fragment
@@ -40,8 +42,8 @@ function noPreWrap(
 
 function kbd(
   props: React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLElement>,
-    HTMLElement
+  React.HTMLAttributes<HTMLElement>,
+  HTMLElement
   >,
 ) {
   return <kbd className='px-2 py-1.5 text-xs font-semibold border rounded-lg bg-gray-950 text-gray-100 border-gray-600'>{props.children}</kbd>;
@@ -57,7 +59,7 @@ export default function ReactMarkdown({ children }: { children: string }) {
         components={{
           code: generateCodeBlock,
           pre: noPreWrap,
-          kbd: kbd,
+          kbd,
         }}
       >
         {children}

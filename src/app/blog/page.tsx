@@ -2,21 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { getAllPosts, getPageCount } from '@/app/lib/getPosts';
-import BackButton from '../components/BackButton';
-import Pagination from '../components/Pagination';
+import BackButton from '@/app/components/BackButton';
+import Pagination from '@/app/components/Pagination';
 
 export const metadata: Metadata = {
   title: 'TrisK>Blog',
   description: 'Blog posts',
 };
 
-export default function BlogMainPage({
-  params,
-}: {
-  params: { pageNum: string };
-}) {
+export default function BlogMainPage({ pageNum } : { pageNum: string }) {
   const pageCount = getPageCount();
-  const { pageNum } = params;
   const posts = getAllPosts(
     ['title', 'date', 'content', 'slug'],
     pageNum ? Number(pageNum) : 1,
