@@ -26,10 +26,16 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
     "autoprefixer": "latest",
     "eslint": "latest",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-next": "latest",
+    "eslint-plugin-prettier": "^5.0.1",
     "postcss": "latest",
+    "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "latest",
     "typescript": "latest"
   }
