@@ -11,3 +11,4 @@
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QHowever, local stores often take the complete mick, taking weeks to get the item in and then when they do it is at a pricing point nowhere near the UK RRP of the product.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QWhich takes me full circle back to the point of, if a consumer can only buy the phone from Apple, and no Amazon resellers can buy them from a wholesaler to resale on, then who the be-jesus are the Guernsey Telecoms companies buying theirs from?\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QHe said that he had tried rebooting the phone, had tried restoring the firmware, and contacted the iStore who said it would have to be sent away to be fixed.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QWould they start washing up whilst the cake is in the oven?\\E$"}
