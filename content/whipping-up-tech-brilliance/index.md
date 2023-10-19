@@ -7,7 +7,7 @@ categories:
 
 A thought I have been having recently has to do with finding new raw talent in tech. How do you interview somebody who doesn't have a CV or a portfolio of work to show you? How do you find the next big thing? Don't get me wrong, I am not saying that you should hire somebody without any programming knowledge, but how do you find somebody who has the potential to be a great programmer?
 
-If you have somebody, for example, who is coming in for a summer job, or a work experience placement, how do you sound out if they have the potential to be a great programmer? I have been giving this some thought recently, and tonight I was at a tech networking event, and I was talking to somebody about this, and I have come up with a solution. It's a piece of cake!
+If you have somebody, for example, who is coming in for a summer job, or a work experience placement, how do you sound out if there is the right mindset hiding in there? I have been giving this some thought recently, and tonight I was at a tech networking event, and I was talking to somebody about this, and I have come up with a solution. It's a piece of cake!
 
 ## The Cake Test
 
