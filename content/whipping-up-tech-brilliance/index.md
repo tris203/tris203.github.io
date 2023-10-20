@@ -53,10 +53,10 @@ function waitUntilTemperatureIsReady(targetTemperature) {
 }
 
 async function makeCake() {
-    await turnOnOven(); // Turn on the oven asynchronously
+    await turnOnOven();
     console.log("Oven is on.");
 
-    await waitUntilTemperatureIsReady(180); // Wait until the oven reaches 180°C
+    await waitUntilTemperatureIsReady(180);
     console.log("Oven is ready! Let's make a cake.");
 }
 
@@ -64,7 +64,8 @@ makeCake();
 ```
 
 > How can you deal with different ingredients in the same recipe?
-> Maybe I'm getting really abstract here, but I think this leads into types and type guards
+
+Maybe I'm getting really abstract here, but I think this leads into types and type guards
 
 ```typescript
 function mixIngredients(ingredients: Ingredient[]) {
