@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function NotFound() {
   return (
     <div className='flex h-screen flex-col items-center justify-center'>

@@ -17,8 +17,8 @@ function relativeImg(props: React.ImgHTMLAttributes<HTMLElement>) {
 
 function generateCodeBlock(
   props: React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLElement>,
-  HTMLElement
+    React.HTMLAttributes<HTMLElement>,
+    HTMLElement
   >,
 ) {
   const match = /language-(\w+)/.exec(props.className || '');
@@ -38,18 +38,17 @@ function generateCodeBlock(
 
 function noPreWrap(
   props: React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLPreElement>,
-  HTMLPreElement
+    React.HTMLAttributes<HTMLPreElement>,
+    HTMLPreElement
   >,
 ) {
-  // eslint-disable-next-line react/jsx-no-useless-fragment
   return <>{props.children}</>;
 }
 
 function kbd(
   props: React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLElement>,
-  HTMLElement
+    React.HTMLAttributes<HTMLElement>,
+    HTMLElement
   >,
 ) {
   return (
@@ -62,19 +61,20 @@ function kbd(
 export default function ReactMarkdown({ children }: { children: string }) {
   return (
     <div className='container'>
-      <Markdown
-        rehypePlugins={[rehypeRaw]}
-        remarkPlugins={[remarkGfm]}
-        className='prose prose-invert max-w-none break-words text-gray-100 prose-p:break-words prose-p:text-justify prose-a:break-all prose-img:h-1/6'
-        components={{
-          code: generateCodeBlock,
-          pre: noPreWrap,
-          img: relativeImg,
-          kbd,
-        }}
-      >
-        {children}
-      </Markdown>
+      <div className='prose prose-invert max-w-none break-words text-gray-100 prose-p:break-words prose-p:text-justify prose-a:break-all prose-img:h-1/6'>
+        <Markdown
+          rehypePlugins={[rehypeRaw]}
+          remarkPlugins={[remarkGfm]}
+          components={{
+            code: generateCodeBlock,
+            pre: noPreWrap,
+            img: relativeImg,
+            kbd,
+          }}
+        >
+          {children}
+        </Markdown>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import BlogMainPage from '@/app/components/BlogMainPage';
 import { getPageCount } from '@/app/lib/getPosts';
 

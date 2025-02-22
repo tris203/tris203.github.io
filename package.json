@@ -10,33 +10,34 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/react-syntax-highlighter": "^15.5.9",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "gray-matter": "^4.0.3",
-    "marked": "^9.1.2",
+    "marked": "^15.0.7",
     "next": "^15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-markdown": "^9.0.0",
-    "react-syntax-highlighter": "^15.5.0",
+    "react-markdown": "^10.0.0",
+    "react-syntax-highlighter": "^15.6.1",
     "rehype-raw": "^7.0.0",
-    "remark-gfm": "^4.0.0"
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.0",
+    "@eslint/js": "^9.21.0",
     "@tailwindcss/postcss": "^4.0.8",
-    "@tailwindcss/typography": "^0.5.10",
-    "@types/node": "^20.8.9",
-    "@types/react": "^18.2.33",
-    "@types/react-dom": "^18.2.14",
-    "@typescript-eslint/eslint-plugin": "^6.9.0",
-    "@typescript-eslint/parser": "^6.9.0",
-    "eslint": "^8.52.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.1.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^22.13.5",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
+    "eslint": "^9.21.0",
     "eslint-config-next": "^15.1.7",
-    "eslint-plugin-prettier": "^5.0.1",
-    "postcss": "^8.4.31",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.8",
-    "typescript": "^5.2.2"
+    "typescript": "^5.7.3"
   }
 }
