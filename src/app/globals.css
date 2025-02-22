@@ -1,6 +1,85 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --animate-typing: typing 3s steps(20) alternate, blink 0.7s 2;
+  --animate-typing2: typing2 3s steps(14) alternate, blink 0.7s 3;
+  --animate-typing3: typing3 3s steps(18) alternate, blink 0.7s infinite;
+  --animate-fadein: fadein 3.5s ease-in-out;
+
+  @keyframes typing {
+    0% {
+      width: 0%;
+      visibility: hidden;
+    }
+    33% {
+      width: 100%;
+    }
+  }
+  @keyframes typing2 {
+    0% {
+      width: 0%;
+      visibility: hidden;
+    }
+    33% {
+      width: 0%;
+      visibility: hidden;
+    }
+    66% {
+      width: 100%;
+    }
+  }
+  @keyframes typing3 {
+    0% {
+      width: 0%;
+      visibility: hidden;
+    }
+    66% {
+      width: 0%;
+      visibility: hidden;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: white;
+    }
+    100% {
+      border-color: transparent;
+    }
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 body {
  background-color: black;
