@@ -39,6 +39,9 @@ export default function Post({ params }: { params: { slug: string } }) {
     'categories',
   ]);
 
+  const [date] = new Date(post.date).toISOString().split('T');
+  post.date = date;
+
   return (
     <div className='container mx-auto px-4 py-4'>
       <div className='mb-4 flex w-full text-gray-100'>

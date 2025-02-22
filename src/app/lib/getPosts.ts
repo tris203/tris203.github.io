@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 
 type Fields = {
   title: string;
-  date: string;
+  date: Date;
   slug: string;
   content: string;
   categories: string[];
@@ -14,18 +14,45 @@ const perPage = 9 as const;
 
 const excludeSlugs = ['about', 'portfolio'];
 
-// type AvailableField = (typeof availableFields)[number];
 type FieldTypes = keyof Fields;
-
 const postsDirectory = join('content');
 
 export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
+  const files = fs
+    .readdirSync(postsDirectory)
+    .filter((file) => file.endsWith('.md'));
+
+  const slugs = files.map((file) => {
+    const filePath = join(postsDirectory, file);
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const { data } = matter(fileContents);
+    return data.slug;
+  });
+
+  return slugs;
 }
 
 export function getPostBySlug(slug: string, fields: FieldTypes[] = []) {
-  const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = join(postsDirectory, `${realSlug}/index.md`);
+  const files = fs
+    .readdirSync(postsDirectory)
+    .filter((file) => file.endsWith('.md'));
+
+  let matchingFile = null;
+  for (const file of files) {
+    const filePath = join(postsDirectory, file);
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const { data } = matter(fileContents);
+    if (data.slug === slug) {
+      matchingFile = file;
+      break;
+    }
+  }
+
+  if (!matchingFile) {
+    throw new Error(`No post found with slug: ${slug}`);
+  }
+
+  const fullPath = join(postsDirectory, matchingFile);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
@@ -35,7 +62,7 @@ export function getPostBySlug(slug: string, fields: FieldTypes[] = []) {
   fields.forEach((field) => {
     switch (field) {
       case 'slug':
-        items[field] = realSlug;
+        items[field] = data.slug;
         break;
       case 'content':
         items[field] = content;
@@ -48,18 +75,49 @@ export function getPostBySlug(slug: string, fields: FieldTypes[] = []) {
 }
 
 export function getAllPosts(fields: FieldTypes[] = [], page: number = 1) {
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .filter((slug) => !excludeSlugs.includes(slug))
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  const files = fs
+    .readdirSync(postsDirectory)
+    .filter((file) => file.endsWith('.md'));
+
+  const posts = files
+    .map((file) => {
+      const filePath = join(postsDirectory, file);
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      const { data, content } = matter(fileContents);
+      if (excludeSlugs.includes(data.slug)) {
+        return null;
+      }
+      const post: Partial<Fields> = {
+        title: data.title || 'Untitled',
+        date: data.date || new Date(),
+        slug: data.slug,
+        content: content,
+        categories: data.categories || [],
+      };
+      return post;
+    })
+    .filter((post) => post !== null)
+    .sort((post1, post2) =>
+      (post1?.date || new Date()) > (post2?.date || new Date()) ? -1 : 1,
+    )
     .slice((page - 1) * perPage, page * perPage);
-  return posts;
+
+  return posts as Fields[];
 }
 
 export function getPageCount() {
-  const slugs = getPostSlugs();
-  const posts = slugs.filter((slug) => !excludeSlugs.includes(slug));
+  const files = fs
+    .readdirSync(postsDirectory)
+    .filter((file) => file.endsWith('.md'));
+
+  const posts = files
+    .map((file) => {
+      const filePath = join(postsDirectory, file);
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      const { data } = matter(fileContents);
+      return data.slug;
+    })
+    .filter((slug) => !excludeSlugs.includes(slug));
+
   return Math.ceil(posts.length / perPage);
 }
