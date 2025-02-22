@@ -36,7 +36,7 @@ export default function HomePage() {
                       </span>
                       <div>
                         <span className='ml-2 text-sm text-gray-400 hover:text-gray-100'>
-                          {post.date}
+                          {new Date(post.date).toISOString().split('T')[0]}
                         </span>
                       </div>
                     </Link>

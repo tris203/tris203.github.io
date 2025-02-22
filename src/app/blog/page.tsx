@@ -10,12 +10,13 @@ export const metadata: Metadata = {
   description: 'Blog posts',
 };
 
-export default function BlogMainPage({ pageNum } : { pageNum: string }) {
+export default function BlogMainPage({ pageNum }: { pageNum: string }) {
   const pageCount = getPageCount();
   const posts = getAllPosts(
     ['title', 'date', 'content', 'slug'],
     pageNum ? Number(pageNum) : 1,
   );
+
   return (
     <div className='container mx-auto px-4 py-4'>
       <BackButton />
@@ -37,7 +38,7 @@ export default function BlogMainPage({ pageNum } : { pageNum: string }) {
                     Read More
                   </span>
                   <span className='mb-4 flex text-sm text-gray-100'>
-                    {post.date}
+                    {new Date(post.date).toISOString().split('T')[0]}
                   </span>
                 </div>
               </div>
