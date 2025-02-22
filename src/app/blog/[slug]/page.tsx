@@ -39,8 +39,7 @@ export default function Post({ params }: { params: { slug: string } }) {
     'categories',
   ]);
 
-  const [date] = new Date(post.date).toISOString().split('T');
-  post.date = date;
+  const stringDate = new Date(post.date).toISOString().split('T');
 
   return (
     <div className='container mx-auto px-4 py-4'>
@@ -50,7 +49,7 @@ export default function Post({ params }: { params: { slug: string } }) {
       <div className='mb-[-2px] rounded-t-lg border-4 border-gray-700 bg-gray-700 px-6 py-4'>
         <div className='grid justify-center'>
           <h1 className='text-3xl font-bold text-gray-100'>{post.title}</h1>
-          <p className='mb-4 text-sm text-gray-100'>{post.date}</p>
+          <p className='mb-4 text-sm text-gray-100'>{stringDate}</p>
 
           {post.categories && (
             <p className='text-gray-100'>

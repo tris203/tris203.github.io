@@ -1,5 +1,6 @@
 ---
 slug: portfolio
+date: 1970-01-01
 ---
 
 Some personal projects I have developed:

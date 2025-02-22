@@ -1,5 +1,6 @@
 ---
 slug: about
+date: 1970-01-01
 ---
 
 I'm a seasoned programmer and tech consultant, specializing in Document Management, Process Automation, and Web Development. Proficient in Typescript, Javascript, and PHP.
