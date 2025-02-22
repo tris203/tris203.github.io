@@ -14,11 +14,10 @@ export function generateStaticParams() {
   });
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  const params = await props.params;
   // read route params then fetch data
   const { slug } = params;
   const post = getPostBySlug(slug, ['title']);
@@ -29,8 +28,12 @@ export async function generateMetadata({
   };
 }
 
-export default function Post({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function Post(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { params } = props;
+  const { slug } = await params;
+
   const post = getPostBySlug(slug, [
     'title',
     'date',
