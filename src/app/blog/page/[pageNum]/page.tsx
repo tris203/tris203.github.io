@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogMainPage from '@/app/blog/page';
+import BlogMainPage from '@/app/components/BlogMainPage';
 import { getPageCount } from '@/app/lib/getPosts';
 
 export function generateStaticParams() {
@@ -9,6 +9,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function page({ params }: { params: { pageNum: string } }) {
+export default async function page(props: {
+  params: Promise<{ pageNum: string }>;
+}) {
+  const params = await props.params;
   return <BlogMainPage pageNum={params.pageNum} />;
 }
