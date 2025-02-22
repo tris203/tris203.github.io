@@ -10,15 +10,15 @@ function relativeImg(props: React.ImgHTMLAttributes<HTMLElement>) {
   const alt = props.alt || 'No Alt';
   const src = props.src || '';
   // remove relative ./ from src
-  const safe_src = src.replace(/^(\.\/)+/, '/');
+  const safeSrc = src.replace(/^(\.\/)+/, '/');
 
-  return <img src={safe_src} alt={alt} />;
+  return <img src={safeSrc} alt={alt} />;
 }
 
 function generateCodeBlock(
   props: React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLElement>,
-    HTMLElement
+  React.HTMLAttributes<HTMLElement>,
+  HTMLElement
   >,
 ) {
   const match = /language-(\w+)/.exec(props.className || '');
@@ -38,8 +38,8 @@ function generateCodeBlock(
 
 function noPreWrap(
   props: React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLPreElement>,
-    HTMLPreElement
+  React.HTMLAttributes<HTMLPreElement>,
+  HTMLPreElement
   >,
 ) {
   // eslint-disable-next-line react/jsx-no-useless-fragment
@@ -48,8 +48,8 @@ function noPreWrap(
 
 function kbd(
   props: React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLElement>,
-    HTMLElement
+  React.HTMLAttributes<HTMLElement>,
+  HTMLElement
   >,
 ) {
   return (

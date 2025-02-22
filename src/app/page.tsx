@@ -3,7 +3,7 @@ import { getAllPosts, getPostBySlug } from './lib/getPosts';
 import ReactMarkdown from './components/ReactMarkdown';
 
 export default function HomePage() {
-  const posts = getAllPosts(['title', 'slug', 'date']);
+  const posts = getAllPosts();
   return (
     <div className='pt=12 flex h-full flex-col bg-gradient-to-tr from-black to-gray-700 pt-24 md:h-screen'>
       <div className='container mx-auto px-4'>

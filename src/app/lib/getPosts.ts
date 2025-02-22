@@ -38,16 +38,16 @@ export function getPostBySlug(slug: string, fields: FieldTypes[] = []) {
     .filter((file) => file.endsWith('.md'));
 
   let matchingFile = null;
-  for (const file of files) {
+  files.find((file) => {
     const filePath = join(postsDirectory, file);
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(fileContents);
     if (data.slug === slug) {
       matchingFile = file;
-      break;
+      return true;
     }
-  }
-
+    return false;
+  });
   if (!matchingFile) {
     throw new Error(`No post found with slug: ${slug}`);
   }
@@ -74,7 +74,7 @@ export function getPostBySlug(slug: string, fields: FieldTypes[] = []) {
   return items;
 }
 
-export function getAllPosts(fields: FieldTypes[] = [], page: number = 1) {
+export function getAllPosts(page: number = 1) {
   const files = fs
     .readdirSync(postsDirectory)
     .filter((file) => file.endsWith('.md'));
@@ -91,15 +91,13 @@ export function getAllPosts(fields: FieldTypes[] = [], page: number = 1) {
         title: data.title || 'Untitled',
         date: data.date || new Date(),
         slug: data.slug,
-        content: content,
+        content,
         categories: data.categories || [],
       };
       return post;
     })
     .filter((post) => post !== null)
-    .sort((post1, post2) =>
-      (post1?.date || new Date()) > (post2?.date || new Date()) ? -1 : 1,
-    )
+    .sort((post1, post2) => ((post1?.date || new Date()) > (post2?.date || new Date()) ? -1 : 1))
     .slice((page - 1) * perPage, page * perPage);
 
   return posts as Fields[];

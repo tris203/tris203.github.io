@@ -12,10 +12,7 @@ export const metadata: Metadata = {
 
 export default function BlogMainPage({ pageNum }: { pageNum: string }) {
   const pageCount = getPageCount();
-  const posts = getAllPosts(
-    ['title', 'date', 'content', 'slug'],
-    pageNum ? Number(pageNum) : 1,
-  );
+  const posts = getAllPosts(pageNum ? Number(pageNum) : 1);
 
   return (
     <div className='container mx-auto px-4 py-4'>
