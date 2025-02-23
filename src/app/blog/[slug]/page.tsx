@@ -42,7 +42,7 @@ export default async function Post(props: {
     'categories',
   ]);
 
-  const stringDate = new Date(post.date).toISOString().split('T');
+  const stringDate = new Date(post.date).toISOString().split('T')[0];
 
   return (
     <div className='container mx-auto px-4 py-4'>
