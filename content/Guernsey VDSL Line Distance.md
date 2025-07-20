@@ -2,8 +2,8 @@
 title: Distance != Quality
 date: 2011-02-11
 slug: distance-is-not-quality
-categories:
-  - rants
+tags:
+  - blog/rants
 ---
 
 After noticing some traffic to my previous post came from some google searches, I decided to search for these terms which brought me to the "I Like Fast Internet blog" at [https://www.fastinternetblog.uk](https://www.fastinternetblog.uk), specifically this post on ["Investigating Internet speeds in Guernsey](https://www.fastinternetblog.uk/?p=81)"

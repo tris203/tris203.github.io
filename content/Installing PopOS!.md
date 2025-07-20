@@ -2,8 +2,8 @@
 title: Pop! goes the install
 date: 2023-10-17
 slug: pop-goes-the-install
-categories: 
-  - tech
+tags:
+  - blog/tech
 ---
 I've been trapped in a Windows hole for a long time now, mainly for the desktop experience. I have been using mainly Debian on servers for a long time, but with edge hosting and Docker that is becoming fewer and far between, not that I am complaining about that as Docker has made the world a much simpler place. 
 

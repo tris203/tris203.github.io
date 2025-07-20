@@ -2,8 +2,8 @@
 title: Kinect Causes RROD
 date: 2011-01-07
 slug: blame-the-kinect
-categories: 
-  - gaming
+tags:
+  - blog/gaming
 ---
 
 According to the BBC "[Online gaming forums have also been buzzing with accounts of consoles showing the Red Ring of Death shortly after plugging in Kinects.](http://www.bbc.co.uk/news/technology-12121999)"

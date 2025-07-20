@@ -2,8 +2,8 @@
 title: Technical Writing Fail - Guernsey Press
 date: 2011-02-28
 slug: ipv4-article-fail
-categories:
-  - rants
+tags:
+  - blog/rants
 ---
 
 I know that Jason was going to cover this on his blog over at [deedoubleyou.net](http://deedoubleyou.net), but he hasn’t. And this was posted on the 4th of February, back when the IPV4 exhaustion thing was current. So I thought I would write a little something about this before it's entirely outdated.
@@ -14,7 +14,7 @@ As an IT Professional/Technical person, reading this explanation was painful, to
 
 So without further ado, look after the break for a copy of the article, and my points after reading it.
 
-Oh, and Guernsey Press, keep away from technical writing for a bit please ![Guernsey Press IPV4 article - 4/2/11](/images/GPArticle.jpg) Please read through the article, on the bits that I have highlighted. You should be able to click on it, to get it full size. Then each of these numbered points below addresses my comments on that highlighted part.
+Oh, and Guernsey Press, keep away from technical writing for a bit please ![Guernsey Press IPV4 article - 4/2/11](./images/GPArticle.jpg) Please read through the article, on the bits that I have highlighted. You should be able to click on it, to get it full size. Then each of these numbered points below addresses my comments on that highlighted part.
 
 ## Fail 1 - Web Address
 

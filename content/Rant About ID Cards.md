@@ -2,8 +2,8 @@
 title: Speaking to Nobody
 date: 2011-03-07
 slug: speaking-to-nobody
-categories:
-  - rants
+tags:
+  - blog/rants
 ---
 
 It is wonderful to have the right to speak out, but it is a shame people then have the right not to reply.

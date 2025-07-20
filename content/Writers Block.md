@@ -2,8 +2,8 @@
 title: Writer's Block
 date: 2014-10-20
 slug: writers-block
-categories: 
-  - rants
+tags:
+  - blog/rants
 ---
 
 After re-activating this blog for the 3rd or 4th time; I now remember why it goes neglected quite a lot.

@@ -2,8 +2,8 @@
 title: Whipping Up Tech Brilliance!
 date: 2023-10-20
 slug: whipping-up-tech-brilliance
-categories:
-  - tech
+tags:
+  - blog/tech
 ---
 
 A thought I have been having recently has to do with finding new raw talent in tech. How do you interview somebody who doesn't have a CV or a portfolio of work to show you? How do you find the next big thing? Don't get me wrong, I am not saying that you should hire somebody without any programming knowledge, but how do you find somebody who has the potential to be a great programmer?

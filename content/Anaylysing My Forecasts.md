@@ -2,8 +2,8 @@
 title: Analysing My Forecasts
 date: 2011-06-21
 slug: analysing-my-forecasts
-categories:
-  - weather
+tags:
+  - blog/weather
 ---
 
 So I've now been predicting the weather for a week, and well all I can say is, I’m pretty damn good at it.

@@ -1,9 +1,9 @@
 ---
 title: iPhone 3GS Rebooting During Call
 date: 2011-02-24
-categories:
-  - tech
 slug: 3gs-reboots-in-call
+tags:
+  - blog/tech
 ---
 
 Today, one of the most senior people at work came to me with their iPhone 3gs which they claimed would reboot approximately 5-10 minutes into a call.

@@ -2,8 +2,9 @@
 title: Sorry State of Guernsey Broadband
 date: 2011-02-03
 slug: guernsey-adsl-is-a-joke
-categories:
-  - rants
+tags:
+  - blog/tech
+  - blog/internet
 ---
 
 Well after reading my good friend Jason (deedoubleyou)'s blog post on the recent upgrade of Guernsey broadband [here](http://deedoubleyou.net/2011/02/01/guernsey-broadband/), I thought I would add my two cents. As I have found out this week, an upgrade to 8mb in Guernsey means an upgrade maybe, if you’re lucky By the way if you read the rest of the post, I really recommend Open DNS, I think it's great.

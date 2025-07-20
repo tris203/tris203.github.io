@@ -2,8 +2,8 @@
 title: Predicting the Weather
 date: 2011-06-14
 slug: predicting-the-weather
-categories:
-  - weather
+tags:
+  - blog/weather
 ---
 
 Predicting the weather is a difficult task, often taking years of training. Then hours of studying charts, tides to predict weather we are going to be wearing shorts or trousers tomorrow.  

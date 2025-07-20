@@ -2,8 +2,8 @@
 title: Snappeh Blog Begins…Again
 date: 2010-12-01
 slug: here-we-go-again
-categories: 
-  - site-news
+tags:
+  - blog/site-news
 ---
 
 Well this is the 3rd WordPress installation at this URL.

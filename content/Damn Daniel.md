@@ -2,8 +2,8 @@
 title: Damn Snappeh, back at it again
 date: 2021-11-24
 slug: damn-snappeh-back-at-it-again
-categories:
-  - site-news
+tags:
+  - blog/site-news
 ---
 
 This blog once again has a new home with the same old content

@@ -2,9 +2,9 @@
 title: Is The Storm Coming? Plug
 date: 2011-03-15
 slug: is-the-storm-coming
-categories: 
-  - recommendations
-  - weather
+tags:
+  - blog/weather
+  - blog/recommendations
 ---
 
 Because I have little other content to put up, I'm just leaving a note about another website I run with Jason, [Is The Storm Coming](http://isthestormcoming.com)?.

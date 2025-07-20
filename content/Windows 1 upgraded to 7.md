@@ -2,8 +2,8 @@
 title: Windows 1 Upgraded To 7
 date: 2011-03-04
 slug: windows1-2-3-95-98-2000-xp-7
-categories: 
-  - tech
+tags:
+  - blog/tech
 ---
 
 Well you know how you always get told, don't do a Windows upgrade installation, and always to install from fresh.

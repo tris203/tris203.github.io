@@ -2,8 +2,8 @@
 title: My Home Server Journey
 date: 2021-11-26
 slug: my-home-server-journey
-categories: 
-  - tech
+tags:
+  - blog/tech
 ---
 
 When I was young I was always wanting to tinker with stuff. I remember excitedly downloading an Ubuntu ISO, burning it to a CD, and installing it on an old Pentium PC that I had got from somewhere.

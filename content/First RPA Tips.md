@@ -2,9 +2,9 @@
 title: Steps for a Successful RPA First Implementation
 date: 2023-10-01
 slug: tips-for-a-sucessful-first-rpa
-categories:
-  - rpa
-  - tech
+tags:
+  - blog/rpa
+  - blog/tech
 ---
 
 ## The Problem

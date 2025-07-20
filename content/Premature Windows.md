@@ -2,8 +2,8 @@
 title: Windows 8, This Soon?
 date: 2011-03-08
 slug: premature-windows
-categories: 
-  - tech
+tags:
+  - blog/tech
 ---
 
 I was reading a blog by Sam Bellis, [here](http://www.sambellis.com/?p=373), asking if we could see Windows 8 materials by June this year, and a post about a Windows 8 2012 release, [here](http://www.sambellis.com/?p=351).
