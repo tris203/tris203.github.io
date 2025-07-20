@@ -2,8 +2,8 @@
 title: An Old Post
 date: 2011-01-20
 slug: 810030d-msn-error
-categories:
-  - tech
+tags:
+  - blog/tech
 ---
 
 As I mentioned in the first post of this install, this blog has been installed and reinstalled lots of times.

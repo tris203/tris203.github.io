@@ -39,7 +39,7 @@ export default async function Post(props: {
     'date',
     'slug',
     'content',
-    'categories',
+    'tags',
   ]);
 
   const stringDate = new Date(post.date).toISOString().split('T')[0];
@@ -54,15 +54,15 @@ export default async function Post(props: {
           <h1 className='text-3xl font-bold text-gray-100'>{post.title}</h1>
           <p className='mb-4 text-sm text-gray-100'>{stringDate}</p>
 
-          {post.categories && (
+          {post.tags && (
             <p className='text-gray-100'>
-              <span className='mr-2'>Categories</span>
-              {post.categories.map((category: string) => (
+              <span className='mr-2'>Tags</span>
+              {post.tags.map((tag: string) => (
                 <span
-                  key={category}
+                  key={tag}
                   className='mr-2 inline-block rounded-full border-t-white bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700'
                 >
-                  {category}
+                  {tag}
                 </span>
               ))}
             </p>

@@ -2,9 +2,9 @@
 title: Rock, Paper, BSOD
 date: 2011-03-09
 slug: rock-paper-scissors-bot
-categories: 
-  - reviews
-  - tech
+tags:
+  - blog/reviews
+  - blog/tech
 ---
 
 Well interestingly the NY Times have released [a bot that plays Rock, Paper, Scissors](http://www.nytimes.com/interactive/science/rock-paper-scissors.html). As the website states:

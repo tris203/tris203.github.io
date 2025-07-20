@@ -2,8 +2,8 @@
 title: Guernsey VDSL Speeds
 date: 2014-10-23
 slug: guernsey-vdsl-speeds
-categories: 
-  - tech
+tags:
+  - blog/tech
 ---
 
 I have previously written some fairly scathing reviews on Guernsey Broadband and the providers based here, examples [here](http://snappeh.com/blog/guernsey-adsl-is-a-joke/), and [here](http://snappeh.com/blog/distance-is-not-quality/). However, when I moved house 8 months ago, I ended up pretty darn close to an MSAN box, and therefore decided to try their VDSL service.

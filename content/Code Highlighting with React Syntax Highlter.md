@@ -2,9 +2,9 @@
 title: Code Highlighting In This Blog
 date: 2023-10-03
 slug: code-highlighting
-categories:
-  - tech
-  - typescript
+tags:
+  - blog/tech
+  - blog/typescript
 ---
 I decided to rewrite this entire website, migrating from WordPress to a static site generated in NextJS, partly because I wanted to have something more customisable and partly because I wanted to get away from WordPress.
 

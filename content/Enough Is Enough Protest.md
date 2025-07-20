@@ -2,8 +2,8 @@
 title: I Gone Done a Protest
 date: 2014-11-17
 slug: enough-is-enough
-categories:
-  - politics
+tags:
+  - blog/politics
 ---
 
 This Sunday, was the date that a peaceful protest had been organised in Guernsey, against the introduction of some of the taxes that have recently been passed through our States government. It was titled 'Enough Is Enough' and was supposed to be middle earners expressing displeasure at the majority of newly formed taxes affecting them, when they are already operating on stretched budgets.

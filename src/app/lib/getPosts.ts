@@ -7,12 +7,12 @@ type Fields = {
   date: Date;
   slug: string;
   content: string;
-  categories: string[];
+  tags: string[];
 };
 
 const perPage = 9 as const;
 
-const excludeSlugs = ['about', 'portfolio'];
+const excludeTags = ['blog/static'];
 
 type FieldTypes = keyof Fields;
 const postsDirectory = join('content');
@@ -68,7 +68,13 @@ export function getPostBySlug(slug: string, fields: FieldTypes[] = []) {
         items[field] = content;
         break;
       default:
-        items[field] = data[field];
+        if (field === 'tags' && Array.isArray(data.tags)) {
+          items[field] = data.tags.map((tag: string) =>
+            tag.replace(/^blog\//, ''),
+          );
+        } else {
+          items[field] = data[field];
+        }
     }
   });
   return items;
@@ -82,9 +88,17 @@ export function getAllPosts(page: number = 1) {
   const posts = files
     .map((file) => {
       const filePath = join(postsDirectory, file);
+      // Exclude any posts in blog/static directory
+      if (filePath.includes('blog/static')) {
+        return null;
+      }
       const fileContents = fs.readFileSync(filePath, 'utf8');
       const { data, content } = matter(fileContents);
-      if (excludeSlugs.includes(data.slug)) {
+      const tags = Array.isArray(data.tags)
+        ? data.tags.map((tag: string) => tag.replace(/^blog\//, ''))
+        : [];
+      // Exclude posts with any tag in excludeTags
+      if (tags.some((tag: string) => excludeTags.includes(tag))) {
         return null;
       }
       const post: Partial<Fields> = {
@@ -92,12 +106,14 @@ export function getAllPosts(page: number = 1) {
         date: data.date || new Date(),
         slug: data.slug,
         content,
-        categories: data.categories || [],
+        tags,
       };
       return post;
     })
     .filter((post) => post !== null)
-    .sort((post1, post2) => ((post1?.date || new Date()) > (post2?.date || new Date()) ? -1 : 1))
+    .sort((post1, post2) =>
+      (post1?.date || new Date()) > (post2?.date || new Date()) ? -1 : 1,
+    )
     .slice((page - 1) * perPage, page * perPage);
 
   return posts as Fields[];
@@ -115,7 +131,14 @@ export function getPageCount() {
       const { data } = matter(fileContents);
       return data.slug;
     })
-    .filter((slug) => !excludeSlugs.includes(slug));
+    .filter((_, idx) => {
+      const file = files[idx];
+      const filePath = join(postsDirectory, file);
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      const { data } = matter(fileContents);
+      const tags = data.tags || [];
+      return !tags.some((tag: string) => excludeTags.includes(tag));
+    });
 
   return Math.ceil(posts.length / perPage);
 }

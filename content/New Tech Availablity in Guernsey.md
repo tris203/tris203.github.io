@@ -2,9 +2,9 @@
 title: The Bleeding Edge - Guernsey Style
 date: 2014-10-17
 slug: the-bleeding-edge
-categories:
-  - rants
-  - tech
+tags:
+  - blog/rants
+  - blog/tech
 ---
 
 Something new has come out, something advanced. Normally a mobile phone of some description. There is one feature you can guarantee, which is a complete absence from any shelves in Guernsey.

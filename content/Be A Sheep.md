@@ -2,9 +2,9 @@
 title: Be A Sheep
 date: 2014-10-16
 slug: be-a-sheep
-categories:
-  - rants
-  - tech
+tags:
+  - blog/rants
+  - blog/tech
 ---
 
 I was reading my friend Shane's [blog post](http://rainbowtrash.com/2014/10/15/why-forza-horizon-2-has-ruined-gaming-for-me/) on Forza Horizon, and how for him, it has ruined gaming for him, and it got me thinking about in general how we choose technology.
