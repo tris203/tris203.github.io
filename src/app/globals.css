@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@plugin '@tailwindcss/typography';
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --animate-typing: typing 3s steps(20) alternate, blink 0.7s 2;
@@ -63,6 +63,42 @@
   }
 }
 
+:root {
+  --tn-bg: #1a1b26;
+  --tn-panel: #16161e;
+  --tn-fg: #c0caf5;
+  --tn-fg-muted: #a9b1d6;
+  --tn-fg-gutter: #3b4261;
+  --tn-comment: #565f89;
+  --tn-border: #3b4261;
+  --tn-selection: #292e42;
+  --tn-blue: #7aa2f7;
+  --tn-blue0: #3d59a1;
+  --tn-blue1: #2ac3de;
+  --tn-blue2: #0db9d7;
+  --tn-blue5: #89ddff;
+  --tn-blue6: #b4f9f8;
+  --tn-blue7: #394b70;
+  --tn-cyan: #7dcfff;
+  --tn-dark3: #545c7e;
+  --tn-dark5: #737aa2;
+  --tn-purple: #bb9af7;
+  --tn-purple-muted: #9d7cd8;
+  --tn-green: #9ece6a;
+  --tn-green1: #73daca;
+  --tn-green2: #41a6b5;
+  --tn-yellow: #e0af68;
+  --tn-orange: #ff9e64;
+  --tn-red: #f7768e;
+  --tn-red1: #db4b4b;
+  --tn-magenta2: #ff007c;
+  --tn-teal: #1abc9c;
+  --tn-terminal-black: #414868;
+  --tn-git-add: #449dab;
+  --tn-git-change: #6183bb;
+  --tn-git-delete: #914c54;
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -82,6 +118,35 @@
 }
 
 body {
- background-color: black;
- color: white;
+  background-color: var(--tn-bg);
+  color: var(--tn-fg);
+  scrollbar-color: var(--tn-border) var(--tn-panel);
+}
+
+* {
+  scrollbar-color: var(--tn-border) var(--tn-panel);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--tn-panel);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tn-border);
+  border: 2px solid var(--tn-panel);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tn-comment);
+}
+
+::selection {
+  background-color: var(--tn-selection);
+  color: var(--tn-fg);
 }

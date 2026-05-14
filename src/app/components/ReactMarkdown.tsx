@@ -1,17 +1,18 @@
 'use client';
 
+import type { SupportedLanguages } from '@pierre/diffs';
+import { File } from '@pierre/diffs/react';
 import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-function relativeImg(props: React.ImgHTMLAttributes<HTMLElement>) {
+function relativeImg(props: React.ImgHTMLAttributes<HTMLImageElement>) {
   const alt = props.alt || 'No Alt';
-  const src = props.src || '';
+  const src = typeof props.src === 'string' ? props.src : '';
   // remove relative ./ from src
   const safeSrc = src.replace(/^(\.\/)+/, '/');
 
+  // biome-ignore lint/performance/noImgElement: Markdown content can include arbitrary image dimensions.
   return <img src={safeSrc} alt={alt} />;
 }
 
@@ -22,17 +23,29 @@ function generateCodeBlock(
   >,
 ) {
   const match = /language-(\w+)/.exec(props.className || '');
+  const language = match?.[1] ?? 'txt';
   return match ? (
-    <SyntaxHighlighter
-      style={vscDarkPlus}
-      language={match[1]}
-      showLineNumbers
-      className='max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none'
-    >
-      {String(props.children).replace(/\n$/, '')}
-    </SyntaxHighlighter>
+    <div className='w-full max-w-full overflow-hidden border border-[var(--tn-border)] bg-[var(--tn-panel)]'>
+      <File
+        file={{
+          contents: String(props.children).replace(/\n$/, ''),
+          lang: language as SupportedLanguages,
+          name: `snippet.${language}`,
+        }}
+        options={{
+          disableFileHeader: true,
+          overflow: 'scroll',
+          theme: 'tokyo-night',
+          useCSSClasses: false,
+          unsafeCSS:
+            '.diffs-file { background: var(--tn-panel); } .diffs-code { background: var(--tn-panel); }',
+        }}
+      />
+    </div>
   ) : (
-    <code>{props.children}</code>
+    <code className='border border-[var(--tn-border)] bg-[var(--tn-panel)] px-1 py-0.5 text-[var(--tn-cyan)]'>
+      {props.children}
+    </code>
   );
 }
 
@@ -52,7 +65,7 @@ function kbd(
   >,
 ) {
   return (
-    <kbd className='rounded-lg border border-gray-600 bg-gray-950 px-2 py-1.5 text-xs font-semibold text-gray-100'>
+    <kbd className='border border-[var(--tn-border)] bg-[var(--tn-panel)] px-2 py-1.5 text-xs font-semibold text-[var(--tn-fg)]'>
       {props.children}
     </kbd>
   );
@@ -60,8 +73,8 @@ function kbd(
 
 export default function ReactMarkdown({ children }: { children: string }) {
   return (
-    <div className='container'>
-      <div className='prose prose-invert max-w-none break-words text-gray-100 prose-p:break-words prose-p:text-justify prose-a:break-all prose-img:h-1/6'>
+    <div className='min-w-0 max-w-full overflow-hidden'>
+      <div className='prose prose-invert max-w-none break-words text-[var(--tn-fg)] prose-headings:text-[var(--tn-cyan)] prose-p:break-words prose-p:text-justify prose-p:text-[var(--tn-fg-muted)] prose-a:break-all prose-a:text-[var(--tn-blue)] prose-strong:text-[var(--tn-fg)] prose-blockquote:border-l-[var(--tn-purple)] prose-blockquote:text-[var(--tn-fg-muted)] prose-li:text-[var(--tn-fg-muted)] prose-img:h-1/6'>
         <Markdown
           rehypePlugins={[rehypeRaw]}
           remarkPlugins={[remarkGfm]}

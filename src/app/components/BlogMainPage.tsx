@@ -1,48 +1,74 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Metadata } from 'next';
-import { getAllPosts, getPageCount } from '@/app/lib/getPosts';
-import BackButton from '@/app/components/BackButton';
 import Pagination from '@/app/components/Pagination';
+import {
+  blogPosts,
+  getBlogPostsPage,
+  pageCount,
+  postsPerPage,
+} from '@/app/lib/content';
 
 export const metadata: Metadata = {
   title: 'TrisK>Blog',
   description: 'Blog posts',
 };
 
+type BlogPostPreview = ReturnType<typeof getBlogPostsPage>[number];
+
 export default async function BlogMainPage({ pageNum }: { pageNum: string }) {
-  const pageCount = getPageCount();
-  const posts = getAllPosts(pageNum ? Number(pageNum) : 1);
+  const page = pageNum ? Number(pageNum) : 1;
+  const posts = getBlogPostsPage(page);
 
   return (
-    <div className='container mx-auto px-4 py-4'>
-      <BackButton />
-      <div className='mb-6 flex w-full text-3xl text-gray-100'>Blog Posts</div>
-      <div className='gap-y8 grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
-        {posts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`}>
-            <div className='boder-gray-700 min-h-full transform flex-col rounded-lg border-4 border-gray-700 bg-gray-800 p-6 transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-700'>
-              <div className='flex-col rounded-lg bg-gray-800 p-2'>
-                <h1 className='pb-2 text-3xl font-bold text-gray-100'>
-                  {post.title}
-                </h1>
-                <div className='mb-6 overflow-hidden text-ellipsis break-words text-gray-100'>
-                  {post.content.substring(0, 150)}
-                </div>
-
-                <div className='absolute bottom-0 left-0 right-0 mx-8 flex justify-between'>
-                  <span className='mb-4 flex text-sm text-gray-100'>
-                    Read More
-                  </span>
-                  <span className='mb-4 flex text-sm text-gray-100'>
-                    {new Date(post.date).toISOString().split('T')[0]}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </Link>
+    <div>
+      <section className='divide-y divide-[var(--tn-border)] border border-[var(--tn-border)] bg-[var(--tn-bg)]'>
+        {posts.map((post, index) => (
+          <PostRow key={post.slug} post={post} index={index} page={page} />
         ))}
-      </div>
-      <Pagination currentPage={pageNum} numPages={pageCount} />
+      </section>
+      <Pagination currentPage={String(page)} numPages={pageCount} />
     </div>
   );
+}
+
+function PostRow({
+  post,
+  index,
+  page,
+}: {
+  post: BlogPostPreview;
+  index: number;
+  page: number;
+}) {
+  const sequence = blogPosts.length - ((page - 1) * postsPerPage + index);
+
+  return (
+    <Link
+      href={`/blog/${post.slug}`}
+      className='grid gap-3 p-5 transition hover:bg-[var(--tn-selection)] md:grid-cols-[6rem_1fr_8rem]'
+    >
+      <span className='text-[var(--tn-comment)]'>
+        #{String(sequence).padStart(3, '0')}
+      </span>
+      <span>
+        <span className='block text-2xl font-bold text-[var(--tn-cyan)]'>
+          {post.title}
+        </span>
+        <span className='mt-2 block text-sm leading-6 text-[var(--tn-fg-muted)]'>
+          {excerpt(post, 160)}...
+        </span>
+      </span>
+      <span className='text-sm text-[var(--tn-yellow)]'>
+        {formatDate(post.date)}
+      </span>
+    </Link>
+  );
+}
+
+function formatDate(date: string) {
+  return new Date(date).toISOString().split('T')[0];
+}
+
+function excerpt(post: BlogPostPreview, length = 180) {
+  return post.content.replace(/\s+/g, ' ').trim().substring(0, length);
 }

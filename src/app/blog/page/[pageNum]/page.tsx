@@ -1,8 +1,7 @@
 import BlogMainPage from '@/app/components/BlogMainPage';
-import { getPageCount } from '@/app/lib/getPosts';
+import { pageCount } from '@/app/lib/content';
 
 export function generateStaticParams() {
-  const pageCount = getPageCount();
   return Array.from({ length: pageCount }, (_, i) => ({
     pageNum: String(i + 1),
   }));

@@ -1,15 +1,11 @@
-import { Metadata } from 'next';
-import { getPostBySlug, getPostSlugs } from '../../lib/getPosts';
+import type { Metadata } from 'next';
 import ReactMarkdown from '@/app/components/ReactMarkdown';
-
-import BackButton from '@/app/components/BackButton';
+import { blogPosts, postBySlug } from '../../lib/content';
 
 export function generateStaticParams() {
-  const slugs = getPostSlugs();
-  return slugs.map((slug) => {
-    const slugNoExt = slug.replace(/\.md$/, '');
+  return blogPosts.map((post) => {
     return {
-      slug: slugNoExt,
+      slug: post.slug,
     };
   });
 }
@@ -18,10 +14,13 @@ export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const params = await props.params;
-  // read route params then fetch data
   const { slug } = params;
-  const post = getPostBySlug(slug, ['title']);
-  // return an object
+  const post = postBySlug.get(slug);
+
+  if (!post) {
+    return {};
+  }
+
   return {
     title: `TrisK>Blog>${post.title}`,
     description: `Blog post titled ${post.title}`,
@@ -33,47 +32,44 @@ export default async function Post(props: {
 }) {
   const { params } = props;
   const { slug } = await params;
+  const post = postBySlug.get(slug);
 
-  const post = getPostBySlug(slug, [
-    'title',
-    'date',
-    'slug',
-    'content',
-    'tags',
-  ]);
+  if (!post) {
+    throw new Error(`No post found with slug: ${slug}`);
+  }
 
   const stringDate = new Date(post.date).toISOString().split('T')[0];
 
   return (
-    <div className='container mx-auto px-4 py-4'>
-      <div className='mb-4 flex w-full text-gray-100'>
-        <BackButton />
-      </div>
-      <div className='mb-[-2px] rounded-t-lg border-4 border-gray-700 bg-gray-700 px-6 py-4'>
-        <div className='grid justify-center'>
-          <h1 className='text-3xl font-bold text-gray-100'>{post.title}</h1>
-          <p className='mb-4 text-sm text-gray-100'>{stringDate}</p>
+    <article className='min-w-0'>
+      <header className='border border-[var(--tn-border)] bg-[var(--tn-panel)] px-6 py-5 shadow-[0_0_80px_rgba(122,162,247,0.12)]'>
+        <p className='text-xs uppercase tracking-[0.4em] text-[var(--tn-blue)]'>
+          /blog/{post.slug}
+        </p>
+        <h1 className='mt-5 text-3xl font-bold text-[var(--tn-cyan)] sm:text-5xl'>
+          {post.title}
+        </h1>
+        <p className='mt-3 text-sm text-[var(--tn-yellow)]'>{stringDate}</p>
 
-          {post.tags && (
-            <p className='text-gray-100'>
-              <span className='mr-2'>Tags</span>
-              {post.tags.map((tag: string) => (
-                <span
-                  key={tag}
-                  className='mr-2 inline-block rounded-full border-t-white bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700'
-                >
-                  {tag}
-                </span>
-              ))}
-            </p>
-          )}
-        </div>
-      </div>
-      <div className='grid justify-center rounded-b-lg border-4 border-gray-700 bg-gray-800'>
-        <div className='px-3 py-6'>
+        {post.tags && (
+          <p className='mt-5 text-[var(--tn-fg-muted)]'>
+            <span className='mr-2 text-[var(--tn-comment)]'>tags</span>
+            {post.tags.map((tag: string) => (
+              <span
+                key={tag}
+                className='mr-2 inline-block border border-[var(--tn-border)] bg-[var(--tn-bg)] px-3 py-1 text-sm font-semibold text-[var(--tn-purple)]'
+              >
+                {tag}
+              </span>
+            ))}
+          </p>
+        )}
+      </header>
+      <div className='min-w-0 border-x border-b border-[var(--tn-border)] bg-[var(--tn-bg)]'>
+        <div className='min-w-0 px-5 py-8 sm:px-8'>
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
       </div>
-    </div>
+    </article>
   );
 }

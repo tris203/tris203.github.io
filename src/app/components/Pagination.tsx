@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type React from 'react';
 
 export default function Pagination({
   currentPage = '1',
@@ -7,26 +8,65 @@ export default function Pagination({
   currentPage: string;
   numPages: number;
 }) {
+  const activePage = Number(currentPage);
+  const previousPage = Math.max(activePage - 1, 1);
+  const nextPage = Math.min(activePage + 1, numPages);
+
   return (
-    <div
-      className='
-    sticky bottom-0 left-0 right-0
-    flex w-full justify-center text-gray-100'
+    <nav className='mt-4 border border-[var(--tn-border)] bg-[var(--tn-panel)] font-mono text-sm text-[var(--tn-fg-muted)]'>
+      <div className='flex flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between'>
+        <span className='text-[var(--tn-comment)]'>
+          pager.status page {activePage} of {numPages}
+        </span>
+        <div className='flex flex-wrap items-center gap-x-3 gap-y-2'>
+          <PagerLink page={previousPage} disabled={activePage === 1}>
+            prev
+          </PagerLink>
+          <span className='flex items-center gap-1 border-x border-[var(--tn-border)] px-3'>
+            {Array.from({ length: Number(numPages) }, (_, i) => i + 1).map(
+              (page) => (
+                <Link
+                  key={`pagination-number${page}`}
+                  href={`/blog/page/${page}`}
+                  className={`px-2 py-1 transition ${
+                    activePage === page
+                      ? 'bg-[var(--tn-selection)] text-[var(--tn-purple)]'
+                      : 'text-[var(--tn-fg-muted)] hover:text-[var(--tn-cyan)]'
+                  }`}
+                >
+                  {page}
+                </Link>
+              ),
+            )}
+          </span>
+          <PagerLink page={nextPage} disabled={activePage === numPages}>
+            next
+          </PagerLink>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+function PagerLink({
+  children,
+  disabled,
+  page,
+}: {
+  children: React.ReactNode;
+  disabled: boolean;
+  page: number;
+}) {
+  if (disabled) {
+    return <span className='text-[var(--tn-comment)]'>{children}</span>;
+  }
+
+  return (
+    <Link
+      href={`/blog/page/${page}`}
+      className='text-[var(--tn-blue)] transition hover:text-[var(--tn-cyan)]'
     >
-      {Array.from({ length: Number(numPages) }, (_, i) => (
-        <Link key={`pagination-number${i + 1}`} href={`/blog/page/${i + 1}`}>
-          <div
-            key={`pagination-number${i + 1}`}
-            className={`mx-1 mt-2 rounded-md px-3 py-2 text-sm font-medium ${
-              Number(currentPage) === i + 1
-                ? 'bg-gray-700 text-gray-100'
-                : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-gray-100'
-            }`}
-          >
-            {i + 1}
-          </div>
-        </Link>
-      ))}
-    </div>
+      {children}
+    </Link>
   );
 }
